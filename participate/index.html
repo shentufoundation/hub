@@ -298,10 +298,46 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Command-Line Interfaces
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Command-Line Interfaces
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../cli/" title="Command-Line Interface" class="md-nav__link">
-      Command-Line Interface
+    <a href="../cli/certikd/certikd/" title="certikd (Server)" class="md-nav__link">
+      certikd (Server)
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/certikcli/certikcli/" title="certikcli (Client)" class="md-nav__link">
+      certikcli (Client)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -387,6 +423,7 @@
 <p>To do transactions on the chain, all alpha testers need to apply via the <a href="https://certik.foundation/">CertiK Foundation website</a>.</p>
 <p>Currently, chain transactions as well as chain account creation can only be performed via the <strong>CLI tool</strong> or <strong>CLI-based RESTful</strong> server. In the near future web wallet will be supported to allow using the chain without the CLI tool.</p>
 <p>The latest chain node binary and CLI tool binary can be downloaded from <a href="https://github.com/certikfoundation/chain/releases">https://github.com/certikfoundation/chain/releases</a></p>
+<p>The latest chain repository is </p>
 <h2 id="run-a-full-node">Run A Full Node<a class="headerlink" href="#run-a-full-node" title="Permanent link">&para;</a></h2>
 <p>During the closed alpha stage, full node addresses for the CLI tool to connect to can be obtained from the mailing list. It is also possible to run your own full nodes and connect the CLI tool to them. In next section you will be shown how to convert your full nodes into validator nodes.</p>
 <p>With <code>certikd</code> one can run full nodes of the CertiK Chain. Its configuration needs to be properly initialized.</p>
@@ -478,7 +515,7 @@
 sed <span class="s2">&quot;s/moniker = .*</span>$<span class="s2">/moniker = \&quot;&lt;YOUR-CUSTOM-NAME&gt;\&quot;/&quot;</span> ~/.certikd/config/config.toml
 
 <span class="c1"># Update the persistent_peers fields</span>
-sed <span class="s2">&quot;s/persistent_peers *=.*/persistent_peers = \&quot;9154957b5246d6c913cdd82dade7db8cf194623b@18.236.198.102:26656,ea7baf3d58b698c0d060c6c13a6832b0ecf7d509@34.219.251.115:26656\&quot;/g&quot;</span> ~/.certikd/config/config.toml
+sed <span class="s2">&quot;s/persistent_peers *=.*/persistent_peers = \&quot;09dbccc66b866628bf889ed16b50a55752bafcbf@172.31.26.26:26656,3742fc9614a7400536683b5fdc6d80783ec54ba2@172.31.29.93:26656,4b7499380bc53c0a96a25b8001edeeea822adc81@172.31.30.181:26656,66e9a1ca395c2f3f38fc708b3495c555857df2dd@172.31.16.126:26656,8031777389b5c89d2df5e79e726c9dfe7209940f@172.31.27.183:26656,85396d33f8669fa6ff7e48db2e879058b9608dff@172.31.29.155:26656,9090955fe7574e92e14c0baf0d9ca5fa26783442@172.31.30.3:26656,9af9f94ad56520d5ba2da4f4b8f2f75665aaace1@172.31.31.45:26656,badfeec13c7a4515de87b7f8874146b03702631e@172.31.19.162:26656\&quot;/g&quot;</span> ~/.certikd/config/config.toml
 </pre></div></div>
 </div>
 <p>Then copy the testnet genesis JSOn file to the node configuration directory.</p>
@@ -563,13 +600,13 @@ It is the only way to recover your account <span class="k">if</span> you ever fo
           </a>
         
         
-          <a href="../cli/" title="Command-Line Interface" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../cli/certikd/certikd/" title="certikd (Server)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Command-Line Interface
+                certikd (Server)
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
