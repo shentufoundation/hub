@@ -10,19 +10,19 @@ In this step, you’ll install Go by downloading the go installer, in this tutor
 
 Before downloading Go, make sure that you are in the home (~) directory:
 
-```bash
+```bash tab="Bash"
 cd ~
 ```
 
 Use curl to retrieve the tarball URL that you copied from the official Go downloads page:
 
-```bash
+```bash tab="Bash"
 curl -O https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
 ```
 
 Next, extract the downloaded archive and install it to the desired location on the system. It’s considered best practice to keep it under `/usr/local`:
 
-```bash
+```bash tab="Bash"
 sudo tar -xzf go1.13.3.linux-amd64.tar.gz -C /usr/local
 ```
 
@@ -37,7 +37,7 @@ Prior to Go 1.8, it was required to set a local environment variable called `$GO
 You can set your `$GOPATH` by adding the global variables to your ~/.profile. You may want to add this into .zshrc or .bashrc file as per your shell configuration.
 
 First, open `~/.profile` or `~/.bashrc` with nano or your preferred text editor:
-```bash
+```bash tab="Bash"
 nano ~/.profile
 ```
 
@@ -47,7 +47,7 @@ Now you need to setup Go language environment variables for your project. Common
 `GOPATH` is the location of your work directory. For example my project directory is ~/Projects/Proj1 .
 
 Now you can export the setting into the `~/.profile` or `~/.bashrc`
-```bash
+```bash tab="Bash"
 # export GOPATH
 echo "export GOPATH=$HOME/go" >> ~/.bashrc
 # set PATH so it includes user's private bin directories
@@ -56,24 +56,25 @@ echo "export PATH=\"$PATH:$GOPATH/bin:/usr/local/go/bin\"" >> ~/.bashrc
 
 To update your shell, issue the following command to load the global variables:
 
-```bash
+```bash tab="Bash"
 . ~/.bashrc
 ```
 
 You can verify your $PATH is updated by using the echo command and inspecting the output:
 
-```bash
+```bash tab="Bash"
 echo $PATH
 ```
 
 Finally, check your go version:
 
-```bash
+```bash tab="Bash"
 go version
 ```
+
 Also Verify all configured environment variables using following command.
 
-```bash
+```bash tab="Bash"
 go env
 ```
 
@@ -81,7 +82,7 @@ go env
 
 The latest chain node binary and CLI tool binary can be downloaded from:
 
-- [v0.4-alpha Latest-Release](https://github.com/certikfoundation/chain/releases/)
+- [v0.5-beta Latest-Release](https://github.com/certikfoundation/chain/releases/)
 
 !!! warning "Notes"
     `certikd`: The daemon for running a full-node of the certik application.

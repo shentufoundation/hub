@@ -6,13 +6,13 @@ theme:
   palette:
     primary: "amber"
     accent: "amber"
-  logo: "img/favicon.ico"
+  logo: "img/certik-foundation.png"
   favicon: "img/favicon.ico"
 extra:
   social:
     - type: "github"
       link: "https://github.com/certikfoundation/chain"
-copyright: "Copyright &copy; 2019-2020 CertiK Foundation"
+copyright: "Copyright &copy; 2019-2022 CertiK Foundation"
 markdown_extensions:
   - markdown.extensions.admonition
   - markdown.extensions.codehilite:
@@ -42,6 +42,11 @@ markdown_extensions:
   - pymdownx.tilde
 nav:
   - What is CertiK Chain: index.md
+  - Latest news: news.md
   - Installation: installation.md
   - Join the Testnet: participate.md
-  - Command-Line Interface: cli.md
+  - Command-Line Interfaces:
+    - certikd (Server): cli/certikd/certikd.md
+    - certikcli (Client): cli/certikcli/certikcli.md
+  - RESTful API Endpoints: "https://api.certik.foundation/chain"
+

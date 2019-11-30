@@ -96,7 +96,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href=".." title="CertiK Foundation Hub" class="md-header-nav__button md-logo">
           
-            <img src="../img/favicon.ico" width="24" height="24">
+            <img src="../img/certik-foundation.png" width="24" height="24">
           
         </a>
       </div>
@@ -166,7 +166,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href=".." title="CertiK Foundation Hub" class="md-nav__button md-logo">
       
-        <img src="../img/favicon.ico" width="48" height="48">
+        <img src="../img/certik-foundation.png" width="48" height="48">
       
     </a>
     CertiK Foundation Hub
@@ -182,6 +182,18 @@
   <li class="md-nav__item">
     <a href=".." title="What is CertiK Chain" class="md-nav__link">
       What is CertiK Chain
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../news/" title="Latest news" class="md-nav__link">
+      Latest news
     </a>
   </li>
 
@@ -269,6 +281,66 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Command-Line Interfaces
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Command-Line Interfaces
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/certikd/certikd/" title="certikd (Server)" class="md-nav__link">
+      certikd (Server)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/certikcli/certikcli/" title="certikcli (Client)" class="md-nav__link">
+      certikcli (Client)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="https://api.certik.foundation/chain" title="RESTful API Endpoints" class="md-nav__link">
+      RESTful API Endpoints
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -342,17 +414,26 @@
 <h2 id="installing-go">Installing Go<a class="headerlink" href="#installing-go" title="Permanent link">&para;</a></h2>
 <p>In this step, you’ll install Go by downloading the go installer, in this tutorial will use the version <code>go 1.13.3</code> from the <a href="https://golang.org/dl/">official Go downloads</a> page.</p>
 <p>Before downloading Go, make sure that you are in the home (~) directory:</p>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~
-</pre></div>
-
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="nb">cd</span> ~
+</pre></div></div>
+</div>
 <p>Use curl to retrieve the tarball URL that you copied from the official Go downloads page:</p>
-<div class="codehilite"><pre><span></span>curl -O https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
-</pre></div>
-
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -O https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
+</pre></div></div>
+</div>
 <p>Next, extract the downloaded archive and install it to the desired location on the system. It’s considered best practice to keep it under <code>/usr/local</code>:</p>
-<div class="codehilite"><pre><span></span>sudo tar -xzf go1.13.3.linux-amd64.tar.gz -C /usr/local
-</pre></div>
-
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>sudo tar -xzf go1.13.3.linux-amd64.tar.gz -C /usr/local
+</pre></div></div>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Notes</p>
 <p>Although <strong>/usr/local/go</strong> is the officially-recommended location, some users may prefer or require different paths.</p>
@@ -361,36 +442,53 @@
 <p>Prior to Go 1.8, it was required to set a local environment variable called <code>$GOPATH</code>. <code>$GOPATH</code> told the compiler where to find imported third party source code, as well as any local source code you had written. While it is no longer explicitly required, it is still considered a good practice as many third party tools still depend on this variable being set.</p>
 <p>You can set your <code>$GOPATH</code> by adding the global variables to your ~/.profile. You may want to add this into .zshrc or .bashrc file as per your shell configuration.</p>
 <p>First, open <code>~/.profile</code> or <code>~/.bashrc</code> with nano or your preferred text editor:
-<div class="codehilite"><pre><span></span>nano ~/.profile
-</pre></div></p>
+<superfences><input name="__tabs_%(index)s" type="radio" id="__tab_%(index)s_%(tab_index)s" %(state)s/>
+<label for="__tab_%(index)s_%(tab_index)s">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>nano ~/.profile
+</pre></div></div></superfences></p>
 <p>Now you need to setup Go language environment variables for your project. Commonly you need to set 3 environment variables as GOROOT, GOPATH and PATH.</p>
 <p><code>GOROOT</code> is the location where Go package is installed on your system.
 <code>GOPATH</code> is the location of your work directory. For example my project directory is ~/Projects/Proj1 .</p>
 <p>Now you can export the setting into the <code>~/.profile</code> or <code>~/.bashrc</code>
-<div class="codehilite"><pre><span></span><span class="c1"># export GOPATH</span>
+<superfences><input name="__tabs_%(index)s" type="radio" id="__tab_%(index)s_%(tab_index)s" %(state)s/>
+<label for="__tab_%(index)s_%(tab_index)s">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="c1"># export GOPATH</span>
 <span class="nb">echo</span> <span class="s2">&quot;export GOPATH=</span><span class="nv">$HOME</span><span class="s2">/go&quot;</span> &gt;&gt; ~/.bashrc
 <span class="c1"># set PATH so it includes user&#39;s private bin directories</span>
 <span class="nb">echo</span> <span class="s2">&quot;export PATH=\&quot;</span><span class="nv">$PATH</span><span class="s2">:</span><span class="nv">$GOPATH</span><span class="s2">/bin:/usr/local/go/bin\&quot;&quot;</span> &gt;&gt; ~/.bashrc
-</pre></div></p>
+</pre></div></div></superfences></p>
 <p>To update your shell, issue the following command to load the global variables:</p>
-<div class="codehilite"><pre><span></span>. ~/.bashrc
-</pre></div>
-
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>. ~/.bashrc
+</pre></div></div>
+</div>
 <p>You can verify your $PATH is updated by using the echo command and inspecting the output:</p>
-<div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="nv">$PATH</span>
-</pre></div>
-
+<div class="superfences-tabs">
+<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
+<label for="__tab_5_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="nv">$PATH</span>
+</pre></div></div>
+</div>
 <p>Finally, check your go version:</p>
-<p><div class="codehilite"><pre><span></span>go version
-</pre></div>
-Also Verify all configured environment variables using following command.</p>
-<div class="codehilite"><pre><span></span>go env
-</pre></div>
-
+<div class="superfences-tabs">
+<input name="__tabs_6" type="radio" id="__tab_6_0" checked="checked" />
+<label for="__tab_6_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>go version
+</pre></div></div>
+</div>
+<p>Also Verify all configured environment variables using following command.</p>
+<div class="superfences-tabs">
+<input name="__tabs_7" type="radio" id="__tab_7_0" checked="checked" />
+<label for="__tab_7_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>go env
+</pre></div></div>
+</div>
 <h2 id="binary">Binary<a class="headerlink" href="#binary" title="Permanent link">&para;</a></h2>
 <p>The latest chain node binary and CLI tool binary can be downloaded from:</p>
 <ul>
-<li><a href="https://github.com/certikfoundation/chain/releases/">v0.4-alpha Latest-Release</a></li>
+<li><a href="https://github.com/certikfoundation/chain/releases/">v0.5-beta Latest-Release</a></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Notes</p>
@@ -417,7 +515,7 @@ Also Verify all configured environment variables using following command.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="What is CertiK Chain" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../news/" title="Latest news" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -426,7 +524,7 @@ Also Verify all configured environment variables using following command.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                What is CertiK Chain
+                Latest news
               </span>
             </div>
           </a>
@@ -454,7 +552,7 @@ Also Verify all configured environment variables using following command.</p>
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2019-2020 CertiK Foundation
+            Copyright &copy; 2019-2022 CertiK Foundation
           </div>
         
         powered by
