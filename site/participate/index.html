@@ -527,11 +527,13 @@ sed -i <span class="s2">&quot;s/moniker = .*</span>$<span class="s2">/moniker = 
 
 <span class="c1"># Update the persistent_peers fields</span>
 sed -i <span class="s2">&quot;s/persistent_peers *=.*/persistent_peers = \&quot;09dbccc66b866628bf889ed16b50a55752bafcbf@172.31.26.26:26656,3742fc9614a7400536683b5fdc6d80783ec54ba2@172.31.29.93:26656,4b7499380bc53c0a96a25b8001edeeea822adc81@172.31.30.181:26656,66e9a1ca395c2f3f38fc708b3495c555857df2dd@172.31.16.126:26656,8031777389b5c89d2df5e79e726c9dfe7209940f@172.31.27.183:26656,85396d33f8669fa6ff7e48db2e879058b9608dff@172.31.29.155:26656,9090955fe7574e92e14c0baf0d9ca5fa26783442@172.31.30.3:26656,9af9f94ad56520d5ba2da4f4b8f2f75665aaace1@172.31.31.45:26656,badfeec13c7a4515de87b7f8874146b03702631e@172.31.19.162:26656\&quot;/g&quot;</span> ~/.certikd/config/config.toml
-</pre></div></div></superfences>
-On MacOS, add the empty string literal <code>''</code> after <code>-i</code>.</p>
+</pre></div></div>
+</div>
+<p>On MacOS, add the empty string literal <code>''</code> after <code>-i</code>.</p>
 <p>Then copy the testnet genesis JSON file to the node configuration directory.</p>
-<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
-<label for="__tab_2_0">Bash</label>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">Bash</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span>cp &lt;PATH-TO-Binary&gt;/chain-0.5-alpha/genesis.json ~/.certikd/config
 </pre></div></div>
 </div>
@@ -540,8 +542,8 @@ On MacOS, add the empty string literal <code>''</code> after <code>-i</code>.</p
 <p>To use the <code>CertiK Chain</code> and do transactions on the chain, one need to first create a chain account and then populate it with test tokens.</p>
 <p>First, create an account address and public / private key pair on your computer. In interactions with the chain, public address and key are used frequently. The private key is stored in your local computer and is needed to sign your transaction before submitting.</p>
 <div class="superfences-tabs">
-<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">Bash</label>
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Bash</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span>$ certikcli keys add &lt;account name&gt;
 Enter a passphrase to encrypt your key to disk:
 Repeat the passphrase:
@@ -563,8 +565,8 @@ It is the only way to recover your account <span class="k">if</span> you ever fo
 <h3 id="become-certify-validator-node">Become Certify Validator Node<a class="headerlink" href="#become-certify-validator-node" title="Permanent link">&para;</a></h3>
 <p>First, run the following command on your node instance for obtaining the tendermint pubkey.</p>
 <div class="superfences-tabs">
-<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
-<label for="__tab_4_0">Bash</label>
+<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
+<label for="__tab_5_0">Bash</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span>certikd tendermint show-validator
 </pre></div></div>
 </div>
