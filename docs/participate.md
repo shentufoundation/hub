@@ -6,9 +6,7 @@ To do transactions on the chain, all alpha testers need to apply via the [CertiK
 
 Currently, chain transactions as well as chain account creation can only be performed via the **CLI tool** or **CLI-based RESTful** server. In the near future web wallet will be supported to allow using the chain without the CLI tool.
 
-The latest chain node binary and CLI tool binary can be downloaded from https://github.com/certikfoundation/chain/releases
-
-The latest chain repository is 
+The latest chain node binary and CLI tool binary can be downloaded from https://github.com/certikfoundation/chain/releases.
 
 ## Run A Full Node
 
@@ -99,13 +97,15 @@ Modify the ~/.certikd/config/config.toml adding following field:
 ```bash tab="Bash"
 
 # Update the moniker fields
-sed "s/moniker = .*$/moniker = \"<YOUR-CUSTOM-NAME>\"/" ~/.certikd/config/config.toml
+sed -i "s/moniker = .*$/moniker = \"<YOUR-CUSTOM-NAME>\"/" ~/.certikd/config/config.toml
 
 # Update the persistent_peers fields
-sed "s/persistent_peers *=.*/persistent_peers = \"09dbccc66b866628bf889ed16b50a55752bafcbf@172.31.26.26:26656,3742fc9614a7400536683b5fdc6d80783ec54ba2@172.31.29.93:26656,4b7499380bc53c0a96a25b8001edeeea822adc81@172.31.30.181:26656,66e9a1ca395c2f3f38fc708b3495c555857df2dd@172.31.16.126:26656,8031777389b5c89d2df5e79e726c9dfe7209940f@172.31.27.183:26656,85396d33f8669fa6ff7e48db2e879058b9608dff@172.31.29.155:26656,9090955fe7574e92e14c0baf0d9ca5fa26783442@172.31.30.3:26656,9af9f94ad56520d5ba2da4f4b8f2f75665aaace1@172.31.31.45:26656,badfeec13c7a4515de87b7f8874146b03702631e@172.31.19.162:26656\"/g" ~/.certikd/config/config.toml
+sed -i "s/persistent_peers *=.*/persistent_peers = \"09dbccc66b866628bf889ed16b50a55752bafcbf@172.31.26.26:26656,3742fc9614a7400536683b5fdc6d80783ec54ba2@172.31.29.93:26656,4b7499380bc53c0a96a25b8001edeeea822adc81@172.31.30.181:26656,66e9a1ca395c2f3f38fc708b3495c555857df2dd@172.31.16.126:26656,8031777389b5c89d2df5e79e726c9dfe7209940f@172.31.27.183:26656,85396d33f8669fa6ff7e48db2e879058b9608dff@172.31.29.155:26656,9090955fe7574e92e14c0baf0d9ca5fa26783442@172.31.30.3:26656,9af9f94ad56520d5ba2da4f4b8f2f75665aaace1@172.31.31.45:26656,badfeec13c7a4515de87b7f8874146b03702631e@172.31.19.162:26656\"/g" ~/.certikd/config/config.toml
 ```
 
-Then copy the testnet genesis JSOn file to the node configuration directory.
+On MacOS, add the empty string literal `''` after `-i`.
+
+Then copy the testnet genesis JSON file to the node configuration directory.
 
 ```bash tab="Bash"
 cp <PATH-TO-Binary>/chain-0.5-alpha/genesis.json ~/.certikd/config
@@ -132,7 +132,7 @@ It is the only way to recover your account if you ever forget your password.
 ...
 ```
 
-Then, go to http://explorer.certik.foundation/faucet, submit your test account's address. The account will receive some amount of CKT and CKG tokens for testing purpose. Please do not abuse the faucet as there are only limited number of tokens available for testnet.
+Then, go to http://explorer.certik.foundation/faucet and submit your test account's address. The account will receive some amount of CKT and CKG tokens for testing purpose. Please do not abuse the faucet as there are only limited number of tokens available for testnet.
 
 You can create multiple accounts for testing purpose.
 
@@ -146,7 +146,7 @@ After creating the full node and completely loading chain history onto it, the c
 
 ### Become Certify Validator Node
 
-First, run below commend on your node instance for obtaining the tendermint pubkey.
+First, run the following command on your node instance for obtaining the tendermint pubkey.
 
 ```bash tab="Bash"
 certikd tendermint show-validator
@@ -156,7 +156,7 @@ Then send the pubkey to **`chain@certik.org`** with **title "request to certify 
 
 Within 24 hours, CertiK will get back to you with either "certified" or "rejected" message.
 
-Once receiving the "certified" message, you can proceed to convert your full node to become a validator node following the instruction on https://certikfoundation.github.io.
+Upon receiving the "certified" message, you can convert your full node to a validator node by following the instruction on https://certikfoundation.github.io.
 
 !!! warning "Notes"
     It is important to note that the current certification process and requirement is likely very different from the future validator node certification. So being certified today does not guarantee the same node will be certified for future versions of testnet and mainnet.

@@ -59,4 +59,4 @@ The open beta stage will last until all testnet features are implemented and pro
 
 The final full stage of testnet starts when the open beta stage exits with all testnet features properly tested.
 
-During this stage, testnet backend and frontend are exepcted to receive on-demand updates. Branching instead of re-deployment will be preferred when solving chain divergence. The validator set size will be large (e.g., no more than 100).
+During this stage, testnet backend and frontend are expected to receive on-demand updates. Branching instead of re-deployment will be preferred when solving chain divergence. The validator set size will be large (e.g., no more than 100).
