@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -434,8 +434,7 @@
 <p>The <a href="https://explorer.certik.foundation/">CertiK Chain Explorer</a> is public accessible and can be used to query on various status of the chain on the web.</p>
 <p>To do transactions on the chain, all alpha testers need to apply via the <a href="https://certik.foundation/">CertiK Foundation website</a>.</p>
 <p>Currently, chain transactions as well as chain account creation can only be performed via the <strong>CLI tool</strong> or <strong>CLI-based RESTful</strong> server. In the near future web wallet will be supported to allow using the chain without the CLI tool.</p>
-<p>The latest chain node binary and CLI tool binary can be downloaded from <a href="https://github.com/certikfoundation/chain/releases">https://github.com/certikfoundation/chain/releases</a></p>
-<p>The latest chain repository is </p>
+<p>The latest chain node binary and CLI tool binary can be downloaded from <a href="https://github.com/certikfoundation/chain/releases">https://github.com/certikfoundation/chain/releases</a>.</p>
 <h2 id="run-a-full-node">Run A Full Node<a class="headerlink" href="#run-a-full-node" title="Permanent link">&para;</a></h2>
 <p>During the closed alpha stage, full node addresses for the CLI tool to connect to can be obtained from the mailing list. It is also possible to run your own full nodes and connect the CLI tool to them. In next section you will be shown how to convert your full nodes into validator nodes.</p>
 <p>With <code>certikd</code> one can run full nodes of the CertiK Chain. Its configuration needs to be properly initialized.</p>
@@ -524,16 +523,15 @@
 <input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
 <label for="__tab_2_0">Bash</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span><span class="c1"># Update the moniker fields</span>
-sed <span class="s2">&quot;s/moniker = .*</span>$<span class="s2">/moniker = \&quot;&lt;YOUR-CUSTOM-NAME&gt;\&quot;/&quot;</span> ~/.certikd/config/config.toml
+sed -i <span class="s2">&quot;s/moniker = .*</span>$<span class="s2">/moniker = \&quot;&lt;YOUR-CUSTOM-NAME&gt;\&quot;/&quot;</span> ~/.certikd/config/config.toml
 
 <span class="c1"># Update the persistent_peers fields</span>
-sed <span class="s2">&quot;s/persistent_peers *=.*/persistent_peers = \&quot;09dbccc66b866628bf889ed16b50a55752bafcbf@172.31.26.26:26656,3742fc9614a7400536683b5fdc6d80783ec54ba2@172.31.29.93:26656,4b7499380bc53c0a96a25b8001edeeea822adc81@172.31.30.181:26656,66e9a1ca395c2f3f38fc708b3495c555857df2dd@172.31.16.126:26656,8031777389b5c89d2df5e79e726c9dfe7209940f@172.31.27.183:26656,85396d33f8669fa6ff7e48db2e879058b9608dff@172.31.29.155:26656,9090955fe7574e92e14c0baf0d9ca5fa26783442@172.31.30.3:26656,9af9f94ad56520d5ba2da4f4b8f2f75665aaace1@172.31.31.45:26656,badfeec13c7a4515de87b7f8874146b03702631e@172.31.19.162:26656\&quot;/g&quot;</span> ~/.certikd/config/config.toml
-</pre></div></div>
-</div>
-<p>Then copy the testnet genesis JSOn file to the node configuration directory.</p>
-<div class="superfences-tabs">
-<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
-<label for="__tab_3_0">Bash</label>
+sed -i <span class="s2">&quot;s/persistent_peers *=.*/persistent_peers = \&quot;09dbccc66b866628bf889ed16b50a55752bafcbf@172.31.26.26:26656,3742fc9614a7400536683b5fdc6d80783ec54ba2@172.31.29.93:26656,4b7499380bc53c0a96a25b8001edeeea822adc81@172.31.30.181:26656,66e9a1ca395c2f3f38fc708b3495c555857df2dd@172.31.16.126:26656,8031777389b5c89d2df5e79e726c9dfe7209940f@172.31.27.183:26656,85396d33f8669fa6ff7e48db2e879058b9608dff@172.31.29.155:26656,9090955fe7574e92e14c0baf0d9ca5fa26783442@172.31.30.3:26656,9af9f94ad56520d5ba2da4f4b8f2f75665aaace1@172.31.31.45:26656,badfeec13c7a4515de87b7f8874146b03702631e@172.31.19.162:26656\&quot;/g&quot;</span> ~/.certikd/config/config.toml
+</pre></div></div></superfences>
+On MacOS, add the empty string literal <code>''</code> after <code>-i</code>.</p>
+<p>Then copy the testnet genesis JSON file to the node configuration directory.</p>
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Bash</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span>cp &lt;PATH-TO-Binary&gt;/chain-0.5-alpha/genesis.json ~/.certikd/config
 </pre></div></div>
 </div>
@@ -542,8 +540,8 @@ sed <span class="s2">&quot;s/persistent_peers *=.*/persistent_peers = \&quot;09d
 <p>To use the <code>CertiK Chain</code> and do transactions on the chain, one need to first create a chain account and then populate it with test tokens.</p>
 <p>First, create an account address and public / private key pair on your computer. In interactions with the chain, public address and key are used frequently. The private key is stored in your local computer and is needed to sign your transaction before submitting.</p>
 <div class="superfences-tabs">
-<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
-<label for="__tab_4_0">Bash</label>
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">Bash</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span>$ certikcli keys add &lt;account name&gt;
 Enter a passphrase to encrypt your key to disk:
 Repeat the passphrase:
@@ -556,29 +554,30 @@ It is the only way to recover your account <span class="k">if</span> you ever fo
 ...
 </pre></div></div>
 </div>
-<p>Then, go to <a href="http://explorer.certik.foundation/faucet">http://explorer.certik.foundation/faucet</a>, submit your test account's address. The account will receive some amount of CKT and CKG tokens for testing purpose. Please do not abuse the faucet as there are only limited number of tokens available for testnet.</p>
+<p>Then, go to <a href="http://explorer.certik.foundation/faucet">http://explorer.certik.foundation/faucet</a> and submit your test account's address. The account will receive some amount of CKT and CKG tokens for testing purpose. Please do not abuse the faucet as there are only limited number of tokens available for testnet.</p>
 <p>You can create multiple accounts for testing purpose.</p>
 <p>Please note that the testnet can be restarted often during the alpha testing stage, so you may need to re-create account / re-apply for test tokens on each testnet restart.</p>
 <h2 id="convert-a-full-node-into-validator-important">Convert a Full Node into Validator (important)<a class="headerlink" href="#convert-a-full-node-into-validator-important" title="Permanent link">&para;</a></h2>
 <p>As <code>CertiK Chain</code> is designed with focus on ultimate blockchain security, one of the security requirements is that all validator nodes must be <strong>certified</strong> by either <code>CertiK</code> or other approved <strong>certifiers</strong>. The actual range of validator node certification is not fully defined during the closed alpha stage, but in general <code>CertiK Chain</code> validator nodes are expected to be powerful with good connectivity, use latest official chain node software releases, and eventually run on secure systems software such as <code>CertiKOS</code> (this is unavailable during closed alpha).</p>
 <p>After creating the full node and completely loading chain history onto it, the current way to get it "certified" to be eligible to for validator purpose is the following.</p>
 <h3 id="become-certify-validator-node">Become Certify Validator Node<a class="headerlink" href="#become-certify-validator-node" title="Permanent link">&para;</a></h3>
-<p>First, run below commend on your node instance for obtaining the tendermint pubkey.</p>
+<p>First, run the following command on your node instance for obtaining the tendermint pubkey.</p>
 <div class="superfences-tabs">
-<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
-<label for="__tab_5_0">Bash</label>
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Bash</label>
 <div class="superfences-content"><div class="codehilite"><pre><span></span>certikd tendermint show-validator
 </pre></div></div>
 </div>
 <p>Then send the pubkey to <strong><code>chain@certik.org</code></strong> with <strong>title "request to certify validator node"</strong> and optionally your reasoning on why this node should be approved to become a validator node (typically in terms of capacity, connectivity, maintenance, and security).</p>
 <p>Within 24 hours, CertiK will get back to you with either "certified" or "rejected" message.</p>
-<p>Once receiving the "certified" message, you can proceed to convert your full node to become a validator node following the instruction on <a href="https://certikfoundation.github.io">https://certikfoundation.github.io</a>.</p>
+<p>Upon receiving the "certified" message, you can convert your full node to a validator node by following the instruction on <a href="https://certikfoundation.github.io">https://certikfoundation.github.io</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Notes</p>
 <p>It is important to note that the current certification process and requirement is likely very different from the future validator node certification. So being certified today does not guarantee the same node will be certified for future versions of testnet and mainnet.</p>
 </div>
                 
                   
+                
                 
               
               
@@ -657,7 +656,7 @@ It is the only way to recover your account <span class="k">if</span> you ever fo
       
     </div>
     
-      <script src="../assets/javascripts/application.c648116f.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
