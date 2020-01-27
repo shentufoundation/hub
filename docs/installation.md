@@ -6,7 +6,7 @@
 
 ## Installing Go
 
-In this step, you’ll install Go by downloading the go installer, in this tutorial will use the version `go 1.13.3` from the [official Go downloads](https://golang.org/dl/) page.
+In this step, you’ll install Go by downloading the go installer. This tutorial will use the version `go 1.13.3` from the [official Go downloads](https://golang.org/dl/) page.
 
 Before downloading Go, make sure that you are in the home (~) directory:
 
@@ -41,7 +41,7 @@ First, open `~/.profile` or `~/.bashrc` with nano or your preferred text editor:
 nano ~/.profile
 ```
 
-Now you need to setup Go language environment variables for your project. Commonly you need to set 3 environment variables as GOROOT, GOPATH and PATH.
+Next, setup Go language environment variables for your project. Usually, you need to set 3 environment variables: GOROOT, GOPATH and PATH.
 
 `GOROOT` is the location where Go package is installed on your system.
 `GOPATH` is the location of your work directory. For example my project directory is ~/Projects/Proj1 .
@@ -72,7 +72,7 @@ Finally, check your go version:
 go version
 ```
 
-Also Verify all configured environment variables using following command.
+Verify all configured environment variables using following command.
 
 ```bash tab="Bash"
 go env
