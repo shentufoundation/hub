@@ -102,6 +102,7 @@ sed -i "s/moniker = .*$/moniker = \"<YOUR-CUSTOM-NAME>\"/" ~/.certikd/config/con
 # Update the persistent_peers fields
 sed -i "s/persistent_peers *=.*/persistent_peers = \"09dbccc66b866628bf889ed16b50a55752bafcbf@172.31.26.26:26656,3742fc9614a7400536683b5fdc6d80783ec54ba2@172.31.29.93:26656,4b7499380bc53c0a96a25b8001edeeea822adc81@172.31.30.181:26656,66e9a1ca395c2f3f38fc708b3495c555857df2dd@172.31.16.126:26656,8031777389b5c89d2df5e79e726c9dfe7209940f@172.31.27.183:26656,85396d33f8669fa6ff7e48db2e879058b9608dff@172.31.29.155:26656,9090955fe7574e92e14c0baf0d9ca5fa26783442@172.31.30.3:26656,9af9f94ad56520d5ba2da4f4b8f2f75665aaace1@172.31.31.45:26656,badfeec13c7a4515de87b7f8874146b03702631e@172.31.19.162:26656\"/g" ~/.certikd/config/config.toml
 ```
+
 On MacOS, add the empty string literal `''` after `-i`.
 
 Then copy the testnet genesis JSON file to the node configuration directory.
