@@ -1,14 +1,14 @@
 [Create Test Account](#create-test-accounts)
 
-# CertiK Chain Testnet
+# Shentu Chain Testnet
 
-This repository hosts the `CertiK Chain` implementation and testnet information. More documents and details will be released here over the progress of testnet.
+This repository hosts the `Shentu Chain` implementation and testnet information. More documents and details will be released here over the progress of testnet.
 
-`CertiK Chain` is the key component in CertiK's vision of building end-to-end secure and trustworthy infrastructure for the blockchain world. Here is a brief [introduction](https://medium.com/certik/introducing-the-certik-chain-26629248da3c) to the chain.
+`Shentu Chain` is the key component in Shentu's vision of building end-to-end secure and trustworthy infrastructure for the blockchain world. Here is a brief [introduction](https://medium.com/shentufoundation/introducing-the-certik-chain-26629248da3c) to the chain.
 
-The first version of `CertiK Chain` is the testnet, which will go through three stages: closed alpha, open beta, and full testnet. The overall goal of testnet is to define and implement a majority of the `CertiK Chain` features and build a strong `CertiK Chain` developer and user community by providing opportunities to contribute to the chain design and development, to evaluate the chain's main features, and to develop smart contracts and other usage scenarios around the chain.
+The first version of `Shentu Chain` is the testnet, which will go through three stages: closed alpha, open beta, and full testnet. The overall goal of testnet is to define and implement a majority of the `Shentu Chain` features and build a strong `Shentu Chain` developer and user community by providing opportunities to contribute to the chain design and development, to evaluate the chain's main features, and to develop smart contracts and other usage scenarios around the chain.
 
-As testnet moves through its various stages, CertiK Foundation expects to provide ample opportunities for active members of the community to be rewarded for their contributions.
+As testnet moves through its various stages, Shentu Foundation expects to provide ample opportunities for active members of the community to be rewarded for their contributions.
 
 ## Timeline
 
@@ -42,29 +42,29 @@ During this stage, testnet backend and frontend are exepcted to receive on-deman
 
 # How to Participate
 
-The [CertiK Chain Explorer](https://explorer.certik.foundation/) is public accessible and can be used to query on various status of the chain on the web.
+The [Shentu Chain Explorer](https://explorer.certik.foundation/) is public accessible and can be used to query on various status of the chain on the web.
 
-To do transactions on the chain, all alpha testers need to apply via the [CertiK Foundation website](https://certik.foundation/).
+To do transactions on the chain, all alpha testers need to apply via the [Shentu Foundation website](https://shentu.foundation/).
 
 Currently, chain transactions as well as chain account creation can only be performed via the CLI tool or CLI-based RESTful server. In the near future web wallet will be supported to allow using the chain without the CLI tool.
 
-The latest chain node binary and CLI tool binary can be downloaded from https://github.com/certikfoundation/chain/releases/.
+The latest chain node binary and CLI tool binary can be downloaded from https://github.com/shentufoundation/chain/releases/.
 
 ## Run A Full Node
 
 During the closed alpha stage, full node addresses for the CLI tool to connect to can be obtained from the mailing list. It is also possible to run your own full nodes and connect the CLI tool to them. In next section you will be shown how to convert your full nodes into validator nodes.
 
-With `certikd` one can run full nodes of the `CertiK Chain`. Its configuration needs to be properly initialized.
+With `shentud` one can run full nodes of the `Shentu Chain`. Its configuration needs to be properly initialized.
 
 ```
-rm -rf ~/.certikd
-certikd init
+rm -rf ~/.shentud
+shentud init test
 ```
 
 You might want to customize your full node's name. Also, the full node needs to connect some existing nodes of the chain, which can be obtained from the mailing list. Open the node configuration file to edit them.
 
 ```
-vi ~/.certikd/config/config.toml
+vi ~/.shentud/config/config.toml
 ```
 
 Edit the following lines.
